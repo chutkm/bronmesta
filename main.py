@@ -48,31 +48,44 @@ async def delete_reservation(reservation_id):
 
 
 # Функция для запуска бота
-async def start_bot():
-    await async_main()  # Инициализация базы данных
-    bot = Bot(token='7101129783:AAH8nZtOvPUyfCAg7008QxjR13Fb5b63ShA')
-    dp = Dispatcher()
-    dp.include_router(router)
-    await dp.start_polling(bot)
+# async def start_bot():
+#     await async_main()  # Инициализация базы данных
+#     bot = Bot(token='7101129783:AAH8nZtOvPUyfCAg7008QxjR13Fb5b63ShA')
+#     dp = Dispatcher()
+#     dp.include_router(router)
+#     await dp.start_polling(bot)
+#
+#
+# async def start_web():
+#     await app.run_task(debug=True)
+#
+#
+# async def main():
+#
+#     bot_task = asyncio.create_task(start_bot())
+#     web_task = asyncio.create_task(start_web())
+#
+#     try:
+#         await asyncio.gather(bot_task, web_task)
+#     except KeyboardInterrupt:
+#         print("Приложение остановлено")
+#
+#
+# if __name__ == "__main__":
+#     try:
+#         asyncio.run(main())
+#     except KeyboardInterrupt:
+#             print("Бот выключен")
 
 
-async def start_web():
-    await app.run_task(debug=True)
 
 
-async def main():
-
-    bot_task = asyncio.create_task(start_bot())
-    web_task = asyncio.create_task(start_web())
-
-    try:
-        await asyncio.gather(bot_task, web_task)
-    except KeyboardInterrupt:
-        print("Приложение остановлено")
 
 
-if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except KeyboardInterrupt:
-            print("Бот выключен")
+
+
+
+
+
+
+
